@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: crunchy-indian-ripper
+    env: docker
+    plan: free
+    autoDeploy: true
+    branch: main
+    rootDir: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: RES
+        value: 1080p
+      - key: CRUNCHY_DOMAIN
+        value: beta.crunchyroll.com
